@@ -22,7 +22,7 @@ const starttime = function () {
       sectime++;
       sec.textContent = `${sectime}`.padStart(2, 0);
       if (sectime === 60) {
-        time = 00;
+        sectime = 00;
         mintime++;
         min.textContent = `${mintime}`.padStart(2, 0);
       }
