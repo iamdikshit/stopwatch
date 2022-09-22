@@ -18,15 +18,17 @@ const starttime = function () {
     time++;
 
     if (time === 100) {
-      time = 0;
+      time = 00;
       sectime++;
       sec.textContent = `${sectime}`.padStart(2, 0);
       if (sectime === 60) {
+        time = 00;
+        mintime++;
         min.textContent = `${mintime}`.padStart(2, 0);
       }
     }
   };
-  const timer = setInterval(tick);
+  const timer = setInterval(tick, 10);
   return timer;
 };
 
@@ -48,7 +50,10 @@ btn_reset.addEventListener("click", function () {
   time = 00;
   sectime = 00;
   mintime = 00;
+
   min.textContent = "00";
   sec.textContent = "00";
   mili.textContent = "00";
+  toggleclass();
+  if (timer) clearInterval(timer);
 });
