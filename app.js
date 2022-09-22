@@ -19,13 +19,14 @@ const starttime = function () {
 
     if (time === 99) {
       time = 00;
-
-      sec.textContent = `${sectime}`.padStart(2, 0);
       sectime++;
+      sec.textContent = `${sectime}`.padStart(2, 0); //59
+
       if (sectime === 60) {
         sectime = 00;
         mintime++;
         min.textContent = `${mintime}`.padStart(2, 0);
+        sec.textContent = `${sectime}`.padStart(2, 0);
       }
     }
   };
