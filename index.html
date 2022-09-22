@@ -53,12 +53,12 @@
         <div
           class="container w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 bg-dark-blue mx-auto rounded-full shadow-3xl shadow-light-blue flex items-center justify-center"
         >
-          <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold text-purpul">
+          <p class="text-4xl sm:text-5xl md:text-7xl font-bold text-white">
             <span class="min">00</span>:<span class="sec">00</span>:<span
               class="mili"
               >00</span
             >
-          </h1>
+          </p>
         </div>
         <div
           class="container mx-auto text-center flex items-center justify-center gap-8"
@@ -69,12 +69,18 @@
             Reset
           </button>
           <button
-            class="btn-reset text-white text-xl sm:2xl py-2 px-8 bg-purpul shadow-2xl shadow-pink rounded-full hover:bg-pink active:bg-pink transition-all duration-500"
+            class="btn-start text-white text-xl sm:2xl py-2 px-8 bg-purpul shadow-2xl shadow-pink rounded-full hover:bg-pink active:bg-pink transition-all duration-500"
           >
             Start
+          </button>
+          <button
+            class="btn-stop hidden text-white text-xl sm:2xl py-2 px-8 bg-purpul shadow-2xl shadow-pink rounded-full hover:bg-pink active:bg-pink transition-all duration-500"
+          >
+            Stop
           </button>
         </div>
       </div>
     </div>
+    <script src="/app.js"></script>
   </body>
 </html>
