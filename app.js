@@ -24,8 +24,8 @@ const starttime = function () {
       sectime++;
       if (sectime === 60) {
         sectime = 00;
-        min.textContent = `${mintime}`.padStart(2, 0);
         mintime++;
+        min.textContent = `${mintime}`.padStart(2, 0);
       }
     }
   };
