@@ -17,11 +17,11 @@ const starttime = function () {
     console.log(time);
     time++;
 
-    if (time === 100) {
+    if (time === 99) {
       time = 00;
       sectime++;
       sec.textContent = `${sectime}`.padStart(2, 0);
-      if (sectime === 60) {
+      if (sectime === 59) {
         sectime = 00;
         mintime++;
         min.textContent = `${mintime}`.padStart(2, 0);
@@ -38,11 +38,13 @@ const toggleclass = function () {
 };
 btn_start.addEventListener("click", function () {
   toggleclass();
+  btn_reset.disabled = true;
   timer = starttime();
 });
 
 btn_stop.addEventListener("click", function () {
   if (timer) clearInterval(timer);
+  btn_reset.disabled = false;
   toggleclass();
 });
 
@@ -54,6 +56,7 @@ btn_reset.addEventListener("click", function () {
   min.textContent = "00";
   sec.textContent = "00";
   mili.textContent = "00";
-  toggleclass();
+  btn_start.classList.remove("hidden");
+  btn_stop.classList.add("hidden");
   if (timer) clearInterval(timer);
 });
